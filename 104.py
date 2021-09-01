@@ -12,5 +12,22 @@ for index, value in enumerate(data):
         stop = index
         break
 
-print(stop) # for debugging
+print(stop)  # for debugging
 del data[:stop]
+print(data)
+
+# process the high values from the list
+
+start = 0
+
+for index in range(len(data)-1, -1, -1):
+    if data[index] <= max_valid:
+        # wW have the index of the last time to keep.
+        # Set 'start' to the possition of the first
+        #item to delte, which is 1 after 'index'.
+        start = index + 1
+        break
+
+print(start) # for debugging
+del data[start:]
+print(data)
