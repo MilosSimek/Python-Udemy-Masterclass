@@ -9,9 +9,12 @@ menu = [
     ["spam", "egg", "spam", "spam", "bacon", "spam"],
 ]
 
-slovo = "spam"
-
-for  meal in menu:
-    if slovo in meal:
-        del meal[slovo]
+for meal in menu:
+    if "spam" not in meal:
         print(meal)
+
+        for item in meal:
+            print(item)
+    else:
+        print("{0} has a spam score of {1}"
+              .format(meal, meal.count("spam")))
