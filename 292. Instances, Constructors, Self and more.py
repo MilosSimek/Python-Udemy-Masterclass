@@ -31,5 +31,6 @@ print("*" * 80)
 
 kenwood.power = 1.5
 print(kenwood.power)
+print(hamilton.power)
 
 
